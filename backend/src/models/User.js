@@ -24,7 +24,7 @@ const UserSchema = new Schema({
         required: true,
         unique: true,
     },
-    senha: {
+    password: {
         type: String,
         required: true,
         select: false,
@@ -34,23 +34,11 @@ const UserSchema = new Schema({
     timestamps: true,
 });
 
-UserSchema.pre('save', async function(next){
-    if(!this.isModified("senha")) next();
-
-    this.senha = await bcrypt.hash(this.senha,10);
-});
-
-UserSchema.methods = {
-    compareHash(hash){
-        return bcrypt.compare(hash, this.senha);
-    },
-    generateToken(){
-        return jwt.s({id:this._id}, "secret",{
-            expiresIn:86400,
-        });
-    }
-
-};
+UserSchema.pre('save', async function (next){
+    const hash = await bcrypt.hash(this.password,10);
+    this.password = hash;
+    next();
+})
 
 
 module.exports = model('User', UserSchema);
