@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 4980,
-  "expoServerNgrokUrl": "https://8v-qej.anonymous.general.exp.direct",
-  "packagerNgrokUrl": "https://packager.8v-qej.anonymous.general.exp.direct",
-  "ngrokPid": 6536
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://8v-qej.dteslab.general.exp.direct",
+  "packagerNgrokUrl": "https://packager.8v-qej.dteslab.general.exp.direct",
+  "ngrokPid": 12280
 }

@@ -6,6 +6,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>BORA MARAGOGIPE KLAN!</Text>
       <Text>CHAMA NO XESQUE!</Text>
+      <Text>É SIM CERO!</Text>
     </View>
   );
 }
