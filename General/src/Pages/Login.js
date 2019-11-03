@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, KeyboardAvoidingView} from 'react-native';
+import { View, Text, StyleSheet, Platform, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
-export default function Login() {
+export default function Login({ navigation }) {
     return (
-        <KeyboardAvoidingView behavior='padding'  style={styles.container}>
+        <KeyboardAvoidingView behavior='padding' style={styles.container}>
             <View style={styles.form}>
                 <Text>Nome completo*</Text>
                 <TextInput style={styles.input} autoCapitalize="words" />

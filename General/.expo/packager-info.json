@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": "https://62-k9e.madebytimd.general.exp.direct",
-  "packagerNgrokUrl": "https://packager.62-k9e.madebytimd.general.exp.direct",
-  "ngrokPid": 3304,
+  "packagerPort": 19001,
+  "packagerPid": 1312,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
