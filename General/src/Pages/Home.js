@@ -11,11 +11,11 @@ export default function Home({ navigation }) {
                 <Lottie resizeMode='contain' autoSize source={services} autoPlay loop />
             </View>
             <View style={styles.bottom}>
-                <TouchableOpacity style={styles.button1}>
+                <TouchableOpacity style={styles.button1}
+                onPress={() => navigation.navigate('Services')}>
                     <Text style={styles.buttonText}>Logar</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button2}
-                    onPress={() => navigation.navigate('Login')}>
+                <TouchableOpacity style={styles.button2}>
                     <Text style={styles.buttonText}
                     >Cadastre-se</Text>
                 </TouchableOpacity>
