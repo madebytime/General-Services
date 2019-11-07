@@ -1,28 +1,39 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity,ImageBackground } from 'react-native';
 import Lottie from 'lottie-react-native';
 
 import services from '../Animations/services.json'
 
+
+
 export default function Home({ navigation }) {
+
     return (
+        
+       
+        
         <View style={styles.container}>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 150 }}>
-                <Lottie resizeMode='contain' autoSize source={services} autoPlay loop />
+            <ImageBackground source={require('./drawable-xxxhdpi/assets/BackgroundHome.png')} />
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 150, width: 250, height: 250 }}>
+                <Lottie resizeMode='contain' source={services} autoPlay loop />
             </View>
             <View style={styles.bottom}>
                 <TouchableOpacity style={styles.button1}
-                onPress={() => navigation.navigate('Services')}>
+                    onPress={() => navigation.navigate('Services')}>
                     <Text style={styles.buttonText}>Logar</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button2}>
+                <TouchableOpacity style={styles.button2}
+                    onPress={() => navigation.navigate('Register')}>
                     <Text style={styles.buttonText}
                     >Cadastre-se</Text>
                 </TouchableOpacity>
             </View>
         </View>
     );
+    
 }
+
+
 
 const styles = StyleSheet.create({
     container: {
@@ -73,6 +84,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
 
+    },
+    backgroundImage: {
+        flex:1,
+        resizeMode: 'cover',
     }
 
 
