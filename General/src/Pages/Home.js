@@ -1,28 +1,37 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity,ImageBackground, SafeAreaView } from 'react-native';
 import Lottie from 'lottie-react-native';
 
 import services from '../Animations/services.json'
 
+
+
 export default function Home({ navigation }) {
+
     return (
-        <View style={styles.container}>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 150 }}>
-                <Lottie resizeMode='contain' autoSize source={services} autoPlay loop />
+        <ImageBackground source={require('../Images/bg.jpg')} style={styles.backgroundImage}>
+        <SafeAreaView style={styles.container}>
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'flex-start', width: 250, height: 250,marginBottom:10}}>
+                <Lottie resizeMode='contain' source={services} autoPlay loop />
             </View>
             <View style={styles.bottom}>
                 <TouchableOpacity style={styles.button1}
-                onPress={() => navigation.navigate('Services')}>
-                    <Text style={styles.buttonText}>Logar</Text>
+                    onPress={() => navigation.navigate('Services')}>
+                    <Text style={styles.buttonText}>Entre com seu e-mail!</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button2}>
+                <TouchableOpacity style={styles.button2}
+                    onPress={() => navigation.navigate('Register')}>
                     <Text style={styles.buttonText}
-                    >Cadastre-se</Text>
+                    >Cadastre-se aqui! </Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </SafeAreaView>
+        </ImageBackground>
     );
+    
 }
+
+
 
 const styles = StyleSheet.create({
     container: {
@@ -34,21 +43,19 @@ const styles = StyleSheet.create({
 
     bottom: {
         flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'flex-end',
+        justifyContent: 'center',
+        alignItems: 'center',
         marginBottom: 35,
         paddingHorizontal: 35,
 
     },
     button1: {
-        borderColor: '#000',
+        borderColor: '#DDD',
         borderWidth: 1,
         height: 50,
         backgroundColor: '#FFF',
-        borderRadius: 7,
-        width: 120,
-        marginRight: 30,
+        borderRadius: 35,
+        width: 300,
         alignItems: 'center',
         justifyContent: 'center',
 
@@ -56,23 +63,26 @@ const styles = StyleSheet.create({
 
     buttonText: {
         fontSize: 20,
-        fontWeight: 'bold',
         color: '#000',
 
     },
 
     button2: {
-        borderColor: '#000',
+        borderColor: '#DDD',
         borderWidth: 1,
         height: 50,
         backgroundColor: '#FFF',
-        borderRadius: 7,
-        width: 120,
-        marginLeft: 30,
-        marginRight: 10,
+        borderRadius: 35,
+        width: 300,
         alignItems: 'center',
         justifyContent: 'center',
+        margin:5,
 
+    },
+    backgroundImage: {
+        flex:1,
+        width:null,
+        height:null,
     }
 
 

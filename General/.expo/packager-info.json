@@ -2,9 +2,16 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
+<<<<<<< HEAD
   "packagerPid": 9664,
   "expoServerNgrokUrl": "https://aj-nnt.dteslab.general.exp.direct",
   "packagerNgrokUrl": "https://packager.aj-nnt.dteslab.general.exp.direct",
   "ngrokPid": 1428,
+=======
+  "packagerPid": 5160,
+  "expoServerNgrokUrl": "https://aj-nnt.anonymous.general.exp.direct",
+  "packagerNgrokUrl": "https://packager.aj-nnt.anonymous.general.exp.direct",
+  "ngrokPid": 4360,
+>>>>>>> 2f181b77cec8b48b46e686d5ac8ac30de74c808e
   "webpackServerPort": null
 }
