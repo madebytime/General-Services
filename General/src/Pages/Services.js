@@ -1,41 +1,30 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View,
+    Text,
+    StyleSheet,
+    container } from 'react-native';
 
-import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+// import { Container } from './styles';
 
-class ServicesScreen extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>
-                    Trying a Little More!
-                </Text>
-            </View>
-        );
-    }
+class Services extends Component {
+  render (){
+    return (
+      <View style={styles.container}>
+        <Text>
+          Olá Services
+        </Text>
+      </View>
+    );
+  }
 }
 
-class SettingsScreen extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <Text>
-                    Again, and again!
-                </Text>
-            </View>
-        );
-    }
-}
+export default Services;
 
-export default createMaterialBottomTabNavigator({
-    Services:{screen:ServicesScreen},
-    Settings:{screen:SettingsScreen}
-});
-
-styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  }
 });

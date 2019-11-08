@@ -8,11 +8,6 @@ import Register from './Pages/Register';
 const Routes = createAppContainer(
     createSwitchNavigator({
         Home,
-        Login,
-        Services,
-        Register
-
-        
     })
 )
 
