@@ -40,7 +40,7 @@ const FirstNavGroup = createBottomTabNavigator({
 }, {
     initialRouteName: 'Serviços',
     tabBarOptions: {
-        activeTintColor: '#c0392b',
+        activeTintColor: '#f1c40f',
         labelStyle: {
             fontSize: 14
         }
