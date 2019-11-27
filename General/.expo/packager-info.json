@@ -1,9 +1,9 @@
 {
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 13760,
-  "expoServerNgrokUrl": "https://88-bhc.anonymous.general.exp.direct",
-  "packagerNgrokUrl": "https://packager.88-bhc.anonymous.general.exp.direct",
-  "ngrokPid": 4584,
+  "packagerPid": 2500,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "devToolsPort": 19002
 }
