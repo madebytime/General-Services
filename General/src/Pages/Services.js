@@ -3,8 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
-  Image, ScrollView, TouchableOpacity,
-  container
+  Image, ScrollView, TouchableOpacity
 } from 'react-native';
 
 // import { Container } from './styles';
