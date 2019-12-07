@@ -11,7 +11,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 // import { Container } from './styles';
 
-class Services extends Component {
+class Explore extends Component {
 
   render() {
     return (
@@ -159,7 +159,7 @@ class Services extends Component {
   }
 }
 
-export default Services;
+export default Explore;
 
 const styles = StyleSheet.create({
   container: {

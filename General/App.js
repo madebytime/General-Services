@@ -5,7 +5,7 @@ import React from 'react';
 // Importações Das Páginas.
 
 import LoggedOut from './src/Pages/LoggedOut';
-import Services from './src/Pages/Services';
+import Explore from './src/Pages/Explore';
 import ServicesRegister from './src/Pages/ServicesRegister';
 import Profile from './src/Pages/Profile';
 import Login from './src/Pages/Login';
@@ -16,8 +16,8 @@ import StartScreen from './src/Pages/StartScreen'
 
 const ThirdNavGroup = createBottomTabNavigator({
 
-    Explorar: {
-        screen: Services,
+    Explore: {
+        screen: Explore,
         navigationOptions: ({ navigation }) => ({
             tabBarIcon: ({ focused }) => {
                 return <Icon name="search" size={20} style={{margin:10}} />
@@ -41,7 +41,7 @@ const ThirdNavGroup = createBottomTabNavigator({
         })
     }
 }, {
-    initialRouteName: 'Explorar',
+    initialRouteName: 'Explore',
     tabBarOptions: {
         labelStyle: {
             fontSize: 14
@@ -61,9 +61,9 @@ const FirstNavGroup = createSwitchNavigator({
     LoggedOut: {
         screen: LoggedOut
     },
-    Services:ThirdNavGroup
-}, {
-    initialRouteName: 'StartScreen'
+    Explore:{
+        screen:ThirdNavGroup
+    }
 })
 
 export default createAppContainer(FirstNavGroup);

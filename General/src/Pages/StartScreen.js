@@ -27,7 +27,7 @@ const StartScreen = (props) => {
             await firebase.auth().onAuthStateChanged(user => {
                 if (user != null) {
                     console.log('Usuário logado!!')
-                    props.navigation.navigate('Services')
+                    props.navigation.navigate('Explore')
                 } else {
                     console.log('Usuário não logado!!');
                     props.navigation.navigate('LoggedOut')

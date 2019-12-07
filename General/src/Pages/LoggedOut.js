@@ -20,10 +20,10 @@ const LoggedOut = (props)=> {
              const credential = firebase.auth.FacebookAuthProvider.credential(token)
              firebase.auth().signInWithCredential(credential).catch(error =>{
                  console.log()
+                 props.navigation.navigate('Explore')
              })
 
         }
-        props.navigation.navigate('Services')
     }    
         return (
             <View style={styles.container}>
