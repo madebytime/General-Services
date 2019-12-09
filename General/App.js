@@ -1,54 +1,69 @@
 import { createSwitchNavigator, createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/FontAwesome'
 import React from 'react';
+// Importações Das Páginas.
 
-// Importação Das Páginas.
-
-import Home from './src/Pages/Home';
-import Services from './src/Pages/Services';
+import LoggedOut from './src/Pages/LoggedOut';
+import Explore from './src/Pages/Explore';
 import ServicesRegister from './src/Pages/ServicesRegister';
 import Profile from './src/Pages/Profile';
+import Login from './src/Pages/Login';
+import Register from './src/Pages/Register';
+import ForgetPass from './src/Pages/ForgetPass';
+import StartScreen from './src/Pages/StartScreen'
 
-const FirstNavGroup = createBottomTabNavigator({
 
-    Registros: {
-        screen: ServicesRegister,
+const ThirdNavGroup = createBottomTabNavigator({
+
+    Explore: {
+        screen: Explore,
         navigationOptions: ({ navigation }) => ({
-            tabBarIcon: ({ focused, tintColor }) => {
-                return <Icon name="ios-create" size={24} color={tintColor} />
+            tabBarIcon: ({ focused }) => {
+                return <Icon name="search" size={20} style={{margin:10}} />
             }
         })
     },
-    Serviços: {
-        screen: Services,
+    Pedidos: {
+        screen: ServicesRegister,
         navigationOptions: ({ navigation }) => ({
-            tabBarIcon: ({ focused, tintColor }) => {
-                return <Icon name="ios-build" size={24} color={tintColor} />
+            tabBarIcon: ({ focused }) => {
+                return <Icon name="bookmark-o" size={20} style={{margin:10}} />
             }
         })
     },
     Perfil: {
         screen: Profile,
         navigationOptions: ({ navigation }) => ({
-            tabBarIcon: ({ focused, tintColor }) => {
-                return <Icon name="ios-person" size={24} color={tintColor} />
+            tabBarIcon: ({ focused }) => {
+                return <Icon name="user-circle" size={20} style={{margin:10}}/>
             }
         })
     }
 }, {
-    initialRouteName: 'Serviços',
+    initialRouteName: 'Explore',
     tabBarOptions: {
-        activeTintColor: '#f1c40f',
         labelStyle: {
             fontSize: 14
-        }
+        },
+        tabStyle: {
+            height: 44,
+            alignItems: 'center',
+            justifyContent: 'center',
+          },
     }
 })
 
-
-
-
+const FirstNavGroup = createSwitchNavigator({
+    StartScreen: {
+        screen:StartScreen,
+    },
+    LoggedOut: {
+        screen: LoggedOut
+    },
+    Explore:{
+        screen:ThirdNavGroup
+    }
+})
 
 export default createAppContainer(FirstNavGroup);
