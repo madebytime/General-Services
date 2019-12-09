@@ -1,9 +1,9 @@
 {
+  "packagerPort": 19001,
+  "packagerPid": 12428,
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 14016,
-  "expoServerNgrokUrl": "https://88-bhc.dteslab.general.exp.direct",
-  "packagerNgrokUrl": "https://packager.88-bhc.dteslab.general.exp.direct",
-  "ngrokPid": 13832
+  "expoServerNgrokUrl": "https://r3-hsi.dteslab.general.exp.direct",
+  "packagerNgrokUrl": "https://packager.r3-hsi.dteslab.general.exp.direct",
+  "ngrokPid": 5748
 }
