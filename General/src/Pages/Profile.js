@@ -54,10 +54,42 @@ class Profile extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
       <SafeAreaView style={styles.safe}>
         {this.renderHeader()}
         {this.renderRequests()}
       </SafeAreaView>
+=======
+      <Container>
+        <Header style={{ backgroundColor: '#f1c40f', height: 200 }}>
+          <Left style={{ marginBottom: 150 }}>
+            <Icon name="md-menu" style={styles.icon} />
+          </Left>
+          <Body style={{ alignItems: 'center', marginLeft: 82, marginBottom: 150 }}>
+            <Avatar
+              size="large"
+              rounded
+              icon={{ name: 'user', type: 'font-awesome' }}
+              activeOpacity={0.7}
+              containerStyle={{ marginTop: 150 }}
+            />
+            <Text style={{ color: 'white' }}>Fulaninho xD</Text>
+          </Body>
+          <Right style={{ marginBottom: 150 }}>
+            <Icon name="md-cog" style={styles.icon}  />
+          </Right>
+        </Header>
+        <SafeAreaView style={styles.container}>
+          <ScrollView>
+            <View>
+              <Text style={styles.container}>
+                Desque
+              </Text>
+            </View>
+          </ScrollView>
+        </SafeAreaView>
+      </Container>
+>>>>>>> 1a57daeecf8de918dfe21850419471e21b54acfa
     );
   }
 
@@ -76,10 +108,20 @@ const styles = StyleSheet.create({
     paddingBottom: 45,
     zIndex: 1
   },
+<<<<<<< HEAD
   requests: {
     marginTop: -40,
     paddingTop: 55 + 20,
     paddingHorizontal: 15,
     zIndex: -1
+=======
+  avatar: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  icon:{
+    marginTop:15,
+    color:'#FFF'
+>>>>>>> 1a57daeecf8de918dfe21850419471e21b54acfa
   }
 });

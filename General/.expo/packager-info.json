@@ -3,7 +3,15 @@
   "packagerPid": 12428,
   "devToolsPort": 19002,
   "expoServerPort": 19000,
+<<<<<<< HEAD
   "expoServerNgrokUrl": "https://r3-hsi.dteslab.general.exp.direct",
   "packagerNgrokUrl": "https://packager.r3-hsi.dteslab.general.exp.direct",
   "ngrokPid": 5748
+=======
+  "packagerPort": 19001,
+  "packagerPid": 6852,
+  "expoServerNgrokUrl": "https://gq-uzu.gabrielr440.general.exp.direct",
+  "packagerNgrokUrl": "https://packager.gq-uzu.gabrielr440.general.exp.direct",
+  "ngrokPid": 8908
+>>>>>>> 1a57daeecf8de918dfe21850419471e21b54acfa
 }
