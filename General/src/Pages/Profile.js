@@ -32,11 +32,11 @@ class Profile extends Component {
       <Container>
         <Header style={{ backgroundColor: '#f1c40f', height: 200 }}>
           <Left style={{ marginBottom: 150 }}>
-            <Icon name="md-menu" style={{ color: 'white' }} />
+            <Icon name="md-menu" style={styles.icon} />
           </Left>
           <Body style={{ alignItems: 'center', marginLeft: 82, marginBottom: 150 }}>
             <Avatar
-              size="xlarge"
+              size="large"
               rounded
               icon={{ name: 'user', type: 'font-awesome' }}
               activeOpacity={0.7}
@@ -45,7 +45,7 @@ class Profile extends Component {
             <Text style={{ color: 'white' }}>Fulaninho xD</Text>
           </Body>
           <Right style={{ marginBottom: 150 }}>
-            <Icon name="md-cog" style={{ color: 'white' }} />
+            <Icon name="md-cog" style={styles.icon}  />
           </Right>
         </Header>
         <SafeAreaView style={styles.container}>
@@ -74,5 +74,9 @@ const styles = StyleSheet.create({
   avatar: {
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  icon:{
+    marginTop:15,
+    color:'#FFF'
   }
 });

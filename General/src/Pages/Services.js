@@ -3,7 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
-  Image, ScrollView, TouchableOpacity,
+  Image, ScrollView, TouchableOpacity, FlatList,
 
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -15,144 +15,133 @@ class Services extends Component {
 
   render() {
     return (
-
-
       <ScrollView>
         <View >
           <Text style={styles.Title}>
             Hōshi
          </Text>
 
-
         </View>
         <View style={styles.container} >
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.91, 0.5]}
-                colors={['#EFBB35', '#4AAE9B']}
-                style={{ borderRadius: 5 }}>
-                <Image style={{ width: 130, height: 130 }} source={require('../Images/mechanic.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Mecânicos</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.7, 0.5]}
-                colors={['#00ffff', '#4b0082', '#EFBB35']}
-                style={{ borderRadius: 5 }}>
-                <Image style={{ width: 130, height: 130, }} source={require('../Images/plumber.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Encanadores</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#4AAE9B', '#e6e6fa']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/bartender.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Barmans</Text>
+            </LinearGradient>
+          </TouchableOpacity>
         </View>
-
         <View style={styles.container} >
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.91, 0.5]}
-                colors={['#ff69b4', '#e9967a']}
-                style={{ borderRadius: 8 }}>
-                <Image style={{ width: 130, height: 130 }} source={require('../Images/makeup.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Makeups</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.91, 0.5]}
-                colors={['#00ffff', '#e9967a']}
-                style={{ borderRadius: 5 }}>
-                <Image style={{ width: 130, height: 130, }} source={require('../Images/electrician.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Eletricitas</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#ba55d3', '#f4a460']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/hairstylist.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Cabelereiras</Text>
+            </LinearGradient>
+          </TouchableOpacity>
         </View>
-
         <View style={styles.container} >
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.91, 0.5]}
-                colors={['#ff69b4', '#e9967a']}
-                style={{ borderRadius: 8 }}>
-                <Image style={{ width: 130, height: 130 }} source={require('../Images/hairstylist.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Cabeleleiras</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.91, 0.5]}
-                colors={['#00ffff', '#e9967a']}
-                style={{ borderRadius: 5 }}>
-                <Image style={{ width: 130, height: 130, }} source={require('../Images/photographer.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Fotógrafos</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#b0e0e6', '#d2691e']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/confectionerCakes.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Confeiteros </Text>
+            </LinearGradient>
+          </TouchableOpacity>
         </View>
-
         <View style={styles.container} >
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.91, 0.5]}
-                colors={['#ff69b4', '#e9967a']}
-                style={{ borderRadius: 8 }}>
-                <Image style={{ width: 130, height: 130 }} source={require('../Images/brickwall.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Pedreiros</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.91, 0.5]}
-                colors={['#00ffff', '#e9967a']}
-                style={{ borderRadius: 5 }}>
-                <Image style={{ width: 130, height: 130, }} source={require('../Images/waiters.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Garçons</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#cd853f', '#ffd700']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/electrician.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Eletricistas</Text>
+            </LinearGradient>
+          </TouchableOpacity>
         </View>
-
         <View style={styles.container} >
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.91, 0.5]}
-                colors={['#ff69b4', '#e9967a']}
-                style={{ borderRadius: 8 }}>
-                <Image style={{ width: 130, height: 130 }} source={require('../Images/Delivery.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Entregas</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.iconPadron}>
-            <TouchableOpacity >
-              <LinearGradient start={[0, 0.5]}
-                end={[0.91, 0.5]}
-                colors={['#00ffff', '#e9967a']}
-                style={{ borderRadius: 5 }}>
-                <Image style={{ width: 130, height: 130, }} source={require('../Images/bartender.png')} />
-                <Text style={{ alignSelf: 'center', fontWeight: 'bold' }}>Barman</Text>
-              </LinearGradient>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#00ced1', '#0000ff']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/plumber.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Encanadores</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.container} >
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#3cb371', '#ffff00']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/Delivery.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Encomendas</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.container} >
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#708090', '#add8e6']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/photographer.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Fotográfos</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.container} >
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#20b2aa', '#6495ed']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/waiters.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Garçons</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.container} >
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#ff69b4', '#e9967a']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/makeup.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Makeup</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.container} >
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={[ '#c0c0c0','#696969']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/mechanic.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Mecânicos</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.container} >
+          <TouchableOpacity >
+            <LinearGradient start={[0, 0.5]}
+              end={[0.91, 0.5,]}
+              colors={['#8b4513', '#dcdcdc']}
+              style={styles.iconPadron, { borderRadius: 5, flexDirection: 'row', justifyContent: 'space-around' }}>
+              <Image style={{ width: 70, height: 70 }} source={require('../Images/Pedreiros.png')} />
+              <Text style={{ fontWeight: 'bold', fontSize: 30, marginTop: 15 }}>Pedreiros</Text>
+            </LinearGradient>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     );
@@ -163,9 +152,14 @@ export default Services;
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    flex: 1,
+    margin: 5,
     backgroundColor: '#fff',
-    flexDirection: 'row',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+
+
+
   },
   Title: {
     color: 'black',
@@ -176,12 +170,15 @@ const styles = StyleSheet.create({
 
   },
   iconPadron: {
-    width: 100,
-    height: 100,
+
+    flexDirection: 'row',
+    width: 330,
+    height: 75,
     margin: 10,
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    borderRadius: 4,
+    borderWidth: 0.5,
+
 
 
   }

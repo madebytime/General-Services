@@ -2,16 +2,8 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-<<<<<<< HEAD
-  "packagerPid": 2500,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
-  "devToolsPort": 19002
-=======
-  "packagerPid": 15712,
-  "expoServerNgrokUrl": "https://88-bhc.dteslab.general.exp.direct",
-  "packagerNgrokUrl": "https://packager.88-bhc.dteslab.general.exp.direct",
-  "ngrokPid": 15388
->>>>>>> 559524840228e596d59207c708f59982a84e9b4b
+  "packagerPid": 3544,
+  "expoServerNgrokUrl": "https://88-bhc.gabrielr440.general.exp.direct",
+  "packagerNgrokUrl": "https://packager.88-bhc.gabrielr440.general.exp.direct",
+  "ngrokPid": 1900
 }
