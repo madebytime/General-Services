@@ -9,7 +9,8 @@ import LoggedOut from '../Pages/LoggedOut';
 import Explore from '../Pages/Explore';
 import ServicesRegister from '../Pages/ServicesRegister';
 import Profile from '../Pages/Profile';
-import StartScreen from '../Pages/StartScreen'
+import StartScreen from '../Pages/StartScreen';
+import Maps from '../Pages/Maps';
 
 const ThirdNavGroup = createBottomTabNavigator({
 
@@ -60,6 +61,9 @@ const FirstNavGroup = createSwitchNavigator({
     },
     Explore:{
         screen:ThirdNavGroup
+    },
+    Maps:{
+        screen:Maps
     }
 })
 
