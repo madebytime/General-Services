@@ -3,31 +3,53 @@ import {
   StyleSheet,
   View,
   Image,
- ScrollView
+  ScrollView, TouchableOpacity
 } from 'react-native';
-import {Container, Body, Card, CardItem, Content,Text} from 'native-base'
+import { Container, Body, Card, CardItem, Content, Text } from 'native-base'
 import colors from '../styles/colors';
+
+import * as firebase from 'firebase'
+import * as reducers from './Reducers/authReducers';
+import * as actions from './Actions/authActions';
+
+
+
+
+
 export default class Profile extends Component {
-  render(){
+  signOutUser = async () => {
+    try {
+      await firebase.auth().signOut();
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  render() {
     return (
       <ScrollView>
         <View style={styles.container}>
-          <View style={styles.header}></View>
-          <Image style={styles.avatar} />
+          <View style={styles.header}>
+            <TouchableOpacity onPress={() => this.signOutUser()} style={{ paddingTop: 35, flexDirection: 'row-reverse', paddingHorizontal: 20 }}>
+              <Text style={{ fontSize: 16, fontWeight: '400' }}>Sair</Text>
+            </TouchableOpacity>
+          </View>
+          <Image style={styles.avatar} source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar6.png' }} />
           <View style={styles.body}>
             <View style={styles.bodyContent}>
-    <Text style={styles.name}></Text>
+              <Text style={styles.name}>Nome do usuário</Text>
             </View>
             <View style={styles.cardContent}>
               <Container>
                 <Content>
-                  <Card style={styles.card}>
-                    <CardItem style={styles.cardItem}>
-                      <Body>
-                        <Text style={styles.cartText}>Meus Dados</Text>
-                      </Body>
-                    </CardItem>
-                  </Card>
+                  <TouchableOpacity>
+                    <Card style={styles.card}>
+                      <CardItem style={styles.cardItem}>
+                        <Body>
+                          <Text style={styles.cartText}>Meus Dados</Text>
+                        </Body>
+                      </CardItem>
+                    </Card>
+                  </TouchableOpacity>
                   <Card style={styles.card}>
                     <CardItem style={styles.cardItem}>
                       <Body>
@@ -50,7 +72,7 @@ export default class Profile extends Component {
                     </CardItem>
                   </Card>
                   <Card style={styles.card}>
-                    <CardItem style={styles.cardItem}>
+                    <CardItem style={styles.cardItem} >
                       <Body>
                         <Text style={styles.cartText}>Configurações</Text>
                       </Body>
@@ -70,8 +92,8 @@ export default class Profile extends Component {
         </View>
       </ScrollView>
     );
-  
-}
+
+  }
 }
 
 const styles = StyleSheet.create({
@@ -116,22 +138,22 @@ const styles = StyleSheet.create({
 
   cardContent: {
     flex: 1,
-    paddingHorizontal:20,
+    paddingHorizontal: 20,
   },
   card: {
     marginBottom: 10,
     marginTop: 10,
     borderRadius: 3,
     borderLeftWidth: 5,
-    backgroundColor:colors.yellow02
-    
+    backgroundColor: colors.yellow02
+
 
 
   },
   cardItem: {
     width: 200,
-    height:80,
-    backgroundColor:colors.yellow02
+    height: 80,
+    backgroundColor: colors.yellow02
   },
   cartText: {
     fontSize: 18,
