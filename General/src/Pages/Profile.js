@@ -5,22 +5,18 @@ import {
   Image,
  ScrollView
 } from 'react-native';
-import { Header, Container, Body, Card, CardItem, Content,Text} from 'native-base'
-
-import colors from '../styles/colors'
-
+import {Container, Body, Card, CardItem, Content,Text} from 'native-base'
+import colors from '../styles/colors';
 export default class Profile extends Component {
-
-  render() {
+  render(){
     return (
       <ScrollView>
         <View style={styles.container}>
           <View style={styles.header}></View>
-          <Image style={styles.avatar} source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar6.png' }} />
+          <Image style={styles.avatar} />
           <View style={styles.body}>
             <View style={styles.bodyContent}>
-              <Text style={styles.name}>John Doe</Text>
-              <Text style={styles.info}>UX Designer / Mobile developer</Text>
+    <Text style={styles.name}></Text>
             </View>
             <View style={styles.cardContent}>
               <Container>
@@ -74,7 +70,8 @@ export default class Profile extends Component {
         </View>
       </ScrollView>
     );
-  }
+  
+}
 }
 
 const styles = StyleSheet.create({

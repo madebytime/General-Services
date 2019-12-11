@@ -4,6 +4,8 @@ import colors from '../styles/colors';
 import Lottie from 'lottie-react-native'
 import loading from '../Animations/loading.json';
 import * as firebase from 'firebase';
+import { useDispatch } from 'react-redux';
+import * as authActions from './Actions/authActions';
 
 var firebaseConfig = {
     apiKey: "AIzaSyAy-8iXPmD2ygJzNrtQn7qqO_Wl-9bhbSI",
@@ -19,14 +21,24 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
+
 // import { Container } from './styles';
 
 const StartScreen = (props) => {
+    
+const dispatch = useDispatch() 
     const tryLogin = async () => {
         try {
             await firebase.auth().onAuthStateChanged(user => {
                 if (user != null) {
                     console.log('Usuário logado!!')
+                    dispatch(authActions.loggedIn(
+                        user.uid, 
+                        user.getIdToken,
+                        user.displayName,
+                        user.photoURL,
+
+                        ))
                     props.navigation.navigate('Explore')
                 } else {
                     console.log('Usuário não logado!!');
