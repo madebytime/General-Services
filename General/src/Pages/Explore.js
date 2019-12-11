@@ -7,35 +7,22 @@ import {
 
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { SearchBar } from 'react-native-elements';
 
+import { createStackNavigator } from 'react-navigation-stack';
 
 // import { Container } from './styles';
 
 class Explore extends Component {
-  state = {
-    search: '',
-  };
-
-  updateSearch = search => {
-    this.setState({ search });
-  };
-
   render() {
-    const { search } = this.state;
     return (
       <ScrollView>
         <View style={{ paddingHorizontal: 25 }}>
           <View>
             <Text style={styles.Title}>Hōshi</Text>
           </View>
-          <View style={styles.localBar}>
-            <TouchableOpacity>
-              <SearchBar
-                round
-                placeholder="Insira sua localização aqui"
-                onChangeText={this.updateSearch}
-                value={search} />
+          <View>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Maps')}>
+              <Text style={styles.local}>Insira sua Localização</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.container} >
@@ -132,6 +119,10 @@ class Explore extends Component {
   }
 }
 
+const AppStackNavigator = createStackNavigator ({
+  Explore: Explore,
+});
+
 export default Explore;
 
 const styles = StyleSheet.create({
@@ -163,10 +154,9 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 0.5,
   },
-  localBar: {
-    color: "#FFFFFF",
-    flex: 1,
-    paddingHorizontal: 4,
-    fontSize: 15
+  local: {
+    fontSize: 24,
+    fontWeight: "700",
+    marginLeft: 4,
   }
 });

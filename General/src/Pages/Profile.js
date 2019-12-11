@@ -3,9 +3,9 @@ import {
   StyleSheet,
   View,
   Image,
- ScrollView
+  ScrollView
 } from 'react-native';
-import { Header, Container, Body, Card, CardItem, Content,Text} from 'native-base'
+import { Header, Container, Body, Card, CardItem, Content, Text } from 'native-base';
 
 import colors from '../styles/colors'
 
@@ -20,7 +20,6 @@ export default class Profile extends Component {
           <View style={styles.body}>
             <View style={styles.bodyContent}>
               <Text style={styles.name}>John Doe</Text>
-              <Text style={styles.info}>UX Designer / Mobile developer</Text>
             </View>
             <View style={styles.cardContent}>
               <Container>
@@ -119,22 +118,22 @@ const styles = StyleSheet.create({
 
   cardContent: {
     flex: 1,
-    paddingHorizontal:20,
+    paddingHorizontal: 20,
   },
   card: {
     marginBottom: 10,
     marginTop: 10,
     borderRadius: 3,
     borderLeftWidth: 5,
-    backgroundColor:colors.yellow02
-    
+    backgroundColor: colors.yellow02
+
 
 
   },
   cardItem: {
     width: 200,
-    height:80,
-    backgroundColor:colors.yellow02
+    height: 80,
+    backgroundColor: colors.yellow02
   },
   cartText: {
     fontSize: 18,
