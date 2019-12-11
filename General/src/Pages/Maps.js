@@ -32,7 +32,7 @@ export default class App extends React.Component {
             longitudeDelta } = this.state.region   
     this.map.animateToRegion({
         latitude,
-        longitude
+        longitude,
         latitudeDelta,
         longitudeDelta,
     })    

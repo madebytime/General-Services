@@ -3,22 +3,9 @@ import {
   StyleSheet,
   View,
   Image,
-<<<<<<< HEAD
   ScrollView
 } from 'react-native';
 import { Header, Container, Body, Card, CardItem, Content, Text } from 'native-base';
-=======
-  ScrollView, TouchableOpacity
-} from 'react-native';
-import { Container, Body, Card, CardItem, Content, Text } from 'native-base'
-import colors from '../styles/colors';
-
-import * as firebase from 'firebase'
-import * as reducers from './Reducers/authReducers';
-import * as actions from './Actions/authActions';
-
-
->>>>>>> 26edbdd6ce29fe0917126629a4fd78439df43447
 
 
 
@@ -42,11 +29,7 @@ export default class Profile extends Component {
           <Image style={styles.avatar} source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar6.png' }} />
           <View style={styles.body}>
             <View style={styles.bodyContent}>
-<<<<<<< HEAD
               <Text style={styles.name}>John Doe</Text>
-=======
-              <Text style={styles.name}>Nome do usuário</Text>
->>>>>>> 26edbdd6ce29fe0917126629a4fd78439df43447
             </View>
             <View style={styles.cardContent}>
               <Container>
