@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react native';
 import { MapView } from 'expo';
 
+import {CurrentLocationButton }  from '.components/DestinationButton'
 export default class App extends React.Component {
     constructor(props) {
         super(props);
@@ -10,9 +11,9 @@ export default class App extends React.Component {
         }
         this._getLocationAsync();
     }
-    _getLocation = async () => {
+    _getLocationAsync = async () => {
         let { status } = await Permissions.askAsync(Permissions.LOCATION);
-        if (status !== 'granted')
+            if (status !== 'granted')
             console.log('Permission to access location was denied.');
 
         let location = await Location.getCurrentPositionAsync({ enabledHighaccuracy: true });
@@ -24,15 +25,29 @@ export default class App extends React.Component {
         }
         this.setState({ region: region })
     }
+    centerMap() {
+        const { latitude,
+            longitude,
+            latitudeDelta,
+            longitudeDelta } = this.state.region   
+    this.map.animateToRegion({
+        latitude,
+        longitude
+        latitudeDelta,
+        longitudeDelta,
+    })    
+    }
     render() {
         return (<View styles={styles.container}>
+            <CurrentLocationButton/>
             <Text>Página Maps</Text>
             <MapView
                 initialRegion={this.state.region}
                 showUserLocation={true}
                 showsCompass={true}
                 rotateEnabled={false}
-                style={{ flex: 1 }}
+                ref= {(map) => {this.map = map}}
+                style={{ flex: 1, zIndex: 0 }}
             />
         </View>
         );
