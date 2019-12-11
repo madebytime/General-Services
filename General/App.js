@@ -41,7 +41,7 @@ const ThirdNavGroup = createBottomTabNavigator({
         })
     }
 }, {
-    initialRouteName: 'Explore',
+    initialRouteName: 'Perfil',
     tabBarOptions: {
         labelStyle: {
             fontSize: 14

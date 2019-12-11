@@ -1,127 +1,143 @@
 import React, { Component } from 'react';
 import {
-  View,
   StyleSheet,
-  SafeAreaView,
-  ScrollView,
-  Alert
+  View,
+  Image,
+ ScrollView
 } from 'react-native';
+import { Header, Container, Body, Card, CardItem, Content,Text} from 'native-base'
 
-import { Avatar } from 'react-native-elements';
+import colors from '../styles/colors'
 
-import { Block, Text } from '../Utility/';
-
-import * as theme from '../Utility/theme';
-
-class Profile extends Component {
-  renderHeader() {
-    return (
-      <Block flex={0.5} column style={{ paddingHorizontal: 15, }}>
-        <Block flex={false} row style={{ paddingVertical: 20, }}>
-          <Block center card shadow>
-            <Text h1 semibold white>
-              Hoshi
-            </Text>
-          </Block>
-
-        </Block>
-        <Block center card shadow color="white" style={styles.headerChart}>
-          <Block>
-            <Avatar 
-            rounded
-            size="large"
-            title="JD"
-            onPress={() => console.log('Funcionando')}
-            activeOpacity={0.7}
-            containerStyle={{  }}
-            />
-          </Block>
-          <Block>
-            <Text h2 light color="black" style={{ paddingVertical: 20 }}>John Doe</Text>
-          </Block>
-        </Block>
-      </Block>
-    )
-  }
-
-  renderRequests() {
-    return (
-      <Block flex={0.8} column color="gray2" style={styles.requests}>
-        <Text semibold>Requests</Text>
-      </Block>
-    );
-  }
+export default class Profile extends Component {
 
   render() {
     return (
-<<<<<<< HEAD
-      <SafeAreaView style={styles.safe}>
-        {this.renderHeader()}
-        {this.renderRequests()}
-      </SafeAreaView>
-=======
-      <Container>
-        <Header style={{ backgroundColor: '#f1c40f', height: 200 }}>
-          <Left style={{ marginBottom: 150 }}>
-            <Icon name="md-menu" style={styles.icon} />
-          </Left>
-          <Body style={{ alignItems: 'center', marginLeft: 82, marginBottom: 150 }}>
-            <Avatar
-              size="large"
-              rounded
-              icon={{ name: 'user', type: 'font-awesome' }}
-              activeOpacity={0.7}
-              containerStyle={{ marginTop: 150 }}
-            />
-            <Text style={{ color: 'white' }}>Fulaninho xD</Text>
-          </Body>
-          <Right style={{ marginBottom: 150 }}>
-            <Icon name="md-cog" style={styles.icon}  />
-          </Right>
-        </Header>
-        <SafeAreaView style={styles.container}>
-          <ScrollView>
-            <View>
-              <Text style={styles.container}>
-                Desque
-              </Text>
+      <ScrollView>
+        <View style={styles.container}>
+          <View style={styles.header}></View>
+          <Image style={styles.avatar} source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar6.png' }} />
+          <View style={styles.body}>
+            <View style={styles.bodyContent}>
+              <Text style={styles.name}>John Doe</Text>
+              <Text style={styles.info}>UX Designer / Mobile developer</Text>
             </View>
-          </ScrollView>
-        </SafeAreaView>
-      </Container>
->>>>>>> 1a57daeecf8de918dfe21850419471e21b54acfa
+            <View style={styles.cardContent}>
+              <Container>
+                <Content>
+                  <Card style={styles.card}>
+                    <CardItem style={styles.cardItem}>
+                      <Body>
+                        <Text style={styles.cartText}>Meus Dados</Text>
+                      </Body>
+                    </CardItem>
+                  </Card>
+                  <Card style={styles.card}>
+                    <CardItem style={styles.cardItem}>
+                      <Body>
+                        <Text style={styles.cartText}>Meus Cartões</Text>
+                      </Body>
+                    </CardItem>
+                  </Card>
+                  <Card style={styles.card}>
+                    <CardItem style={styles.cardItem}>
+                      <Body>
+                        <Text style={styles.cartText}>Cupons</Text>
+                      </Body>
+                    </CardItem>
+                  </Card>
+                  <Card style={styles.card}>
+                    <CardItem style={styles.cardItem}>
+                      <Body>
+                        <Text style={styles.cartText}>Favoritos</Text>
+                      </Body>
+                    </CardItem>
+                  </Card>
+                  <Card style={styles.card}>
+                    <CardItem style={styles.cardItem}>
+                      <Body>
+                        <Text style={styles.cartText}>Configurações</Text>
+                      </Body>
+                    </CardItem>
+                  </Card>
+                  <Card style={styles.card}>
+                    <CardItem style={styles.cardItem}>
+                      <Body>
+                        <Text style={styles.cartText}>Ajuda</Text>
+                      </Body>
+                    </CardItem>
+                  </Card>
+                </Content>
+              </Container>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
     );
   }
-
 }
 
-
-export default Profile;
-
 const styles = StyleSheet.create({
-  safe: {
-    flex: 1,
-    backgroundColor: theme.colors.tertiary,
+  header: {
+    backgroundColor: colors.yellow02,
+    height: 200,
   },
-  headerChart: {
-    paddingTop: 30,
-    paddingBottom: 45,
-    zIndex: 1
-  },
-<<<<<<< HEAD
-  requests: {
-    marginTop: -40,
-    paddingTop: 55 + 20,
-    paddingHorizontal: 15,
-    zIndex: -1
-=======
   avatar: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    width: 130,
+    height: 130,
+    borderRadius: 63,
+    borderWidth: 4,
+    borderColor: "white",
+    marginBottom: 10,
+    alignSelf: 'center',
+    position: 'absolute',
+    marginTop: 130
   },
-  icon:{
-    marginTop:15,
-    color:'#FFF'
->>>>>>> 1a57daeecf8de918dfe21850419471e21b54acfa
+  name: {
+    fontSize: 22,
+    color: "#FFFFFF",
+    fontWeight: '600',
+  },
+  body: {
+    marginTop: 40,
+  },
+  bodyContent: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 30,
+  },
+  name: {
+    fontSize: 28,
+    color: "#696969",
+    fontWeight: "600"
+  },
+  info: {
+    fontSize: 16,
+    color: colors.yellow02,
+    marginTop: 10
+  },
+
+  cardContent: {
+    flex: 1,
+    paddingHorizontal:20,
+  },
+  card: {
+    marginBottom: 10,
+    marginTop: 10,
+    borderRadius: 3,
+    borderLeftWidth: 5,
+    backgroundColor:colors.yellow02
+    
+
+
+  },
+  cardItem: {
+    width: 200,
+    height:80,
+    backgroundColor:colors.yellow02
+  },
+  cartText: {
+    fontSize: 18,
+    fontWeight: '700',
   }
 });

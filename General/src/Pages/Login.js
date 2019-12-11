@@ -37,9 +37,3 @@ export default class Login extends Component {
     )
   }
 }
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 02d414a179df92b8e981368a96bfdc716dcc9298
