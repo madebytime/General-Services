@@ -1,9 +1,17 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
+<<<<<<< HEAD
   "packagerPort": 19001,
   "packagerPid": 2288,
   "expoServerNgrokUrl": "https://i9-bzt.dteslab.general.exp.direct",
   "packagerNgrokUrl": "https://packager.i9-bzt.dteslab.general.exp.direct",
   "ngrokPid": 8364
+=======
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": "https://qq-b4d.anonymous.general.exp.direct",
+  "packagerNgrokUrl": "https://packager.qq-b4d.anonymous.general.exp.direct",
+  "ngrokPid": 10856
+>>>>>>> 26edbdd6ce29fe0917126629a4fd78439df43447
 }

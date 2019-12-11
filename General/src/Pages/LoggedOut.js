@@ -28,11 +28,6 @@ const LoggedOut = (props)=> {
         return (
             <View style={styles.container}>
                 <View style={styles.welcomeContainer}>
-                <View style={styles.loginContainer}>
-                    <TouchableOpacity>
-                        <Text style={styles.textLogin} >Entrar</Text>
-                    </TouchableOpacity>
-                </View>
                     <Lottie resizeMode='contain' source={services} autoPlay style={styles.animation} />
                     <Text style={styles.welcomeText}>Bem-vindo(a) ao Hōshi.</Text>
                     <View style={styles.buttonContainer}>
@@ -48,12 +43,6 @@ const LoggedOut = (props)=> {
                                 <Image source={google} style={styles.googleButtonIcon} />
 
                                 <Text style={styles.buttonText}>Entre com o Google</Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity style={[{ backgroundColor: colors.white }, styles.Buttonwrapper]}>
-                            <View style={styles.buttonTextWrapper}>
-                                <Icon name='wrench' size={20} style={styles.iconHoshi} />
-                                <Text style={styles.buttonText}>Crie sua conta Hōshi</Text>
                             </View>
                         </TouchableOpacity>
                     </View>
